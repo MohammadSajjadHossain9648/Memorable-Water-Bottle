@@ -1,0 +1,6 @@
+.bottles_container{
+    text-align: center;
+}
+.bottles_container .description{
+    font-size: 1.5rem; /* 24px */
+}
