@@ -1,0 +1,13 @@
+.bottle_container{
+    text-align: center;
+}
+.bottle_container .bottle_title{
+    font-size: 2rem; /* 32px */
+}
+.bottle_container img{
+    height: 18%;
+    width: 18%;
+}
+.bottle_container .bottle_btn{
+    background-color: seagreen;
+}
