@@ -16,9 +16,15 @@ const Bottles = () => {
         <div className='bottles_container'>
             <p className='description'>Unique bottle designs: {bottles.length}</p>
             <p className="cart">Purchased bottle: </p>
-            {
-                bottles.map(bottle => <Bottle key={bottle.id} bottle={bottle}></Bottle>)
-            }
+            <div className='bottles_card'>
+                {
+                    bottles.map(bottle => <Bottle
+                                                key={bottle.id}
+                                                bottle={bottle}
+                                          ></Bottle>)
+                }
+            </div>
+
         </div>
     );
 };

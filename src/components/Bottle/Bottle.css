@@ -1,13 +1,18 @@
 .bottle_container{
     text-align: center;
+    border: 1px solid seagreen;
+    border-radius: 10px;
 }
 .bottle_container .bottle_title{
-    font-size: 2rem; /* 32px */
+    font-size: 1.25rem; /* 20px */
+}
+.bottle_container .bottle_description{
+
 }
 .bottle_container img{
-    height: 18%;
-    width: 18%;
+    height: 50%;
+    width: 40%;
 }
 .bottle_container .bottle_btn{
-    background-color: seagreen;
+    background-color:chartreuse;
 }
