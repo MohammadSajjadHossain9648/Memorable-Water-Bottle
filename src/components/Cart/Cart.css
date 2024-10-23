@@ -6,6 +6,10 @@
     border: 1px solid seagreen;
     border-radius: 10px;
 }
+.cart_container .cart_title{
+    text-align: center;
+    grid-column: span 2;
+}
 .cart_container img{
     width: 100%;
     height: auto;
