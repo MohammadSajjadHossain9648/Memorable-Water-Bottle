@@ -3,6 +3,7 @@ import './Bottles.css'
 import { useEffect } from 'react';
 import Bottle from '../Bottle/Bottle';
 import { addToLS, getLocalStorageData } from '../Utilities/localStorage';
+import Cart from '../Cart/Cart';
 
 const Bottles = () => {
     const [bottles, setBottles] = useState([]);
@@ -27,7 +28,6 @@ const Bottles = () => {
 
                 if(bottleData){
                     savedCart.push(bottleData);
-                    console.log("saved card", savedCart);
                 }
             }
 
@@ -64,7 +64,7 @@ const Bottles = () => {
                 </div>
 
                 <div className="purchase_container">
-                        
+                    <Cart cart={cart}></Cart>
                 </div>
             </div>
         </div>
