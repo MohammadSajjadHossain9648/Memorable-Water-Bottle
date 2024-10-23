@@ -21,5 +21,16 @@ const addToLS = (id) => {
     localStorage.setItem('cart', cartString);
 }
 
+// remove -> remove bottle id from local storage saved data and again save it to local storage
+const removeFromLS = (id) => {
+    // remove -> remove bottle id from stored data
+    const cartData = getLocalStorageData();
+    const UpdatedData = cartData.filter(bottleId => bottleId !== id);
 
-export {addToLS, getLocalStorageData};
+    //convert local storage JS object to JSON string and return it to local storage
+    const cartString = JSON.stringify(UpdatedData);
+    localStorage.setItem('cart', cartString);
+}
+
+
+export {addToLS, getLocalStorageData, removeFromLS};

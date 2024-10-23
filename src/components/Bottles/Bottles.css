@@ -7,7 +7,7 @@
 
 .bottles_container{
     display: grid;
-    grid-template-columns: 1.6fr 0.4fr;
+    grid-template-columns: 1.7fr 0.3fr;
     gap: 10px;
 }
 .bottles_container .info_container{

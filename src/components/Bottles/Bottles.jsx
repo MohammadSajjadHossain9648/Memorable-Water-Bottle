@@ -2,7 +2,7 @@ import { useState } from 'react';
 import './Bottles.css'
 import { useEffect } from 'react';
 import Bottle from '../Bottle/Bottle';
-import { addToLS, getLocalStorageData } from '../Utilities/localStorage';
+import { addToLS, getLocalStorageData, removeFromLS } from '../Utilities/localStorage';
 import Cart from '../Cart/Cart';
 
 const Bottles = () => {
@@ -37,10 +37,22 @@ const Bottles = () => {
 
     //purchase button handler
     const handleAddToCart = (bottle) => {
+        //add to website UI
         const newCart = [...cart, bottle];
         setCart(newCart);
-        //add bottle id in local storage for purchase purposes only
+
+        //add bottle id in local storage
         addToLS(bottle.id);
+    }
+
+    //remove purchase button handler
+    const handleRemoveFromCart = (id) => {
+        //remove from website UI
+        const remainingCart = cart.filter(bottle => bottle.id !== id);
+        setCart(remainingCart);
+
+        //remove bottle id from local storage
+        removeFromLS(id);
     }
 
     return (
@@ -58,6 +70,7 @@ const Bottles = () => {
                                                             key={bottle.id}
                                                             bottle={bottle}
                                                             handleAddToCart={handleAddToCart}
+                                                            handleRemoveFromCart={handleRemoveFromCart}
                                                     ></Bottle>)
                             }
                     </div>
