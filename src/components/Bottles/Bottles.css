@@ -1,11 +1,19 @@
-.bottles_container{
+.bottles_header{
     text-align: center;
 }
-.bottles_container .description{
+.bottles_header .bottles_description{
     font-size: 1.5rem; /* 24px */
 }
-.bottles_container .bottles_card{
-    width: 80%;
+
+.bottles_container{
+    display: grid;
+    grid-template-columns: 1.4fr 0.6fr;
+}
+.bottles_container .info_container{
+    text-align: center;
+}
+
+.bottles_container .info_container .bottles_card{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 10px;
